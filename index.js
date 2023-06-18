@@ -1,1 +1,0 @@
-const tien = document.querySelector("")
