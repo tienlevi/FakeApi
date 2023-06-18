@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .movie {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .movie iframe {
+        width: 1400px;
+        height: 900px;
+    }
+</style>
+
+<body>
+    <div class="movie"></div>
+</body>
+<script>
+    const param = new URLSearchParams(window.location.search);
+    const id = param.get("id");
+
+    function getAPI() {
+        const option = {
+            method: "GET",
+            responseType: "JSON",
+        }
+        fetch("http://localhost:3000/Lists/" + id, option)
+            .then(response => response.json())
+            .then(data => {
+                const movie = document.querySelector(".movie")
+
+                movie.innerHTML += `<iframe src="${data.iframe}">`
+            });
+    }
+    getAPI()
+</script>
+
+</html>
