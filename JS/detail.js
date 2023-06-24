@@ -6,7 +6,7 @@ function getAPI() {
         method: "GET",
         responseType: "JSON",
     }
-    fetch("http://localhost:3000/List/" + id, option)
+    fetch("https://testapi-tj1g.onrender.com/List" + id, option)
         .then(response => response.json())
         .then(data => {
             const movie = document.querySelector(".movie-detail");
