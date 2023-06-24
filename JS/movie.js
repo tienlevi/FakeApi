@@ -1,6 +1,7 @@
 const param = new URLSearchParams(window.location.search);
 const id = param.get("id");
 
+
 function getAPI() {
     const option = {
         method: "GET",

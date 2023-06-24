@@ -1,12 +1,13 @@
 const param = new URLSearchParams(window.location.search);
 const id = param.get("id");
+const API = "https://testapi-tj1g.onrender.com/List";
 
 function getAPI() {
     const option = {
         method: "GET",
         responseType: "JSON",
     }
-    fetch("https://testapi-tj1g.onrender.com/List/" + id, option)
+    fetch(API + "/" + id, option)
         .then(response => response.json())
         .then(data => {
             const movie = document.querySelector(".movie-detail");
