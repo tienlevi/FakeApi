@@ -1,4 +1,4 @@
-const API = "https://testapi-tj1g.onrender.com";
+const API = "https://testapi-tj1g.onrender.com/List/"
 
 function getAPI() {
     fetch(API)
