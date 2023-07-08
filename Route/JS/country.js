@@ -8,7 +8,6 @@ function currentAPI() {
     .then((response) => response.json())
     .then((data) => {
       const list = data.map((dataList) => {
-        console.log(dataList);
         return `<div class="movie-content">
                 <div class="movie-content-img">
                 <img src="${dataList.img}">
@@ -25,46 +24,25 @@ function currentAPI() {
     });
 }
 
-function getAPI() {
-  fetch(API)
-    .then((response) => response.json())
-    .then((response) => console.log(response));
-}
-
 const select = document.querySelector(".myselect");
 
 function myFunction() {
   const select = document.querySelector(".myselect");
   const option = select.options[select.selectedIndex].value;
   const movieContent = document.querySelectorAll(".movie-content");
-  const genre = document.querySelectorAll(".movie-content-text p");
+  const genre = document.querySelectorAll(".movie-content-text b");
   for (let i = 0; i < genre.length; i++) {
-    const filter = movieContent[i].querySelectorAll(".movie-content-text p")[0];
+    const filter = movieContent[i].querySelectorAll(".movie-content-text b")[0];
     const chose = filter.innerHTML || filter.innerText;
-    if (chose.includes("Action") && option == "Action") {
+    if (chose.includes("USA") && option == "USA") {
       movieContent[i].style.display = "";
     } else {
       movieContent[i].style.display = "none";
     }
-    if (chose.includes("Drama") && option == "Drama") {
+    if (chose.includes("UK") && option == "UK") {
       movieContent[i].style.display = "";
     }
-    if (chose.includes("Horror") && option == "Horror") {
-      movieContent[i].style.display = "";
-    }
-    if (chose.includes("Adventure") && option == "Adventure") {
-      movieContent[i].style.display = "";
-    }
-    if (chose.includes("Crime") && option == "Crime") {
-      movieContent[i].style.display = "";
-    }
-    if (chose.includes("Thriller") && option == "Thriller") {
-      movieContent[i].style.display = "";
-    }
-    if (chose.includes("Animation") && option == "Animation") {
-      movieContent[i].style.display = "";
-    }
-    if (chose.includes("Sci-Fi") && option == "Sci-Fi") {
+    if (chose.includes("Russia") && option == "Russia") {
       movieContent[i].style.display = "";
     }
     if (chose.includes("") && option == "") {
@@ -75,7 +53,6 @@ function myFunction() {
 select.addEventListener("change", myFunction);
 
 currentAPI();
-getAPI();
 
 menuBar.addEventListener("click", () => {
   menu.classList.add("menu-active");

@@ -8,7 +8,6 @@ function currentAPI() {
     .then((response) => response.json())
     .then((data) => {
       const list = data.map((dataList) => {
-        console.log(dataList);
         return `<div class="movie-content">
                 <div class="movie-content-img">
                 <img src="${dataList.img}">
@@ -23,12 +22,6 @@ function currentAPI() {
       });
       document.querySelector(".movies").innerHTML = list.join("");
     });
-}
-
-function getAPI() {
-  fetch(API)
-    .then((response) => response.json())
-    .then((response) => console.log(response));
 }
 
 const select = document.querySelector(".myselect");
@@ -75,7 +68,6 @@ function myFunction() {
 select.addEventListener("change", myFunction);
 
 currentAPI();
-getAPI();
 
 menuBar.addEventListener("click", () => {
   menu.classList.add("menu-active");
