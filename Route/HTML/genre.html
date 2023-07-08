@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/genre.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="icon" href="./Route/Image/logo.png" />
+    <title>MovieHD</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <img src="../Image/logo.png" alt="" />
+      </div>
+      <div class="menu">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="genre.html">Genre</a></li>
+        <li><a href="country.html">Country</a></li>
+        <i class="fa-solid fa-xmark" id="close-icon"></i>
+      </div>
+      <form action="search.html?name=" method="get" onload="">
+        <input type="text" placeholder="Search movie" name="name" />
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        <div class="menu-bar">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </form>
+    </header>
+    <div class="movie-column">
+      <div class="genre-select">
+        <form>
+          <select class="myselect">
+            <option value="">All</option>
+            <option value="Action">Action</option>
+            <option value="Drama">Drama</option>
+            <option value="Horror">Horror</option>
+            <option value="Adventure">Adventure</option>
+            <option value="Crime">Crime</option>
+            <option value="Thriller">Thriller</option>
+            <option value="Animation">Animation</option>
+            <option value="Sci-Fi">Sci-Fi</option>
+          </select>
+        </form>
+      </div>
+      <div class="movies"></div>
+    </div>
+  </body>
+  <script src="../JS/genre.js"></script>
+</html>
