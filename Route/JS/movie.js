@@ -11,6 +11,7 @@ function getAPI() {
     .then((data) => {
       const movie = document.querySelector(".movie");
       document.title = `Watch ${data.name}`;
+      movie.innerHTML += `<h1>Watch ${data.name}</h1>`;
       movie.innerHTML += `<iframe src="${data.iframe}" allowfullscreen>`;
     });
 }
