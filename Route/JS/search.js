@@ -42,7 +42,7 @@ function searchMovie() {
     const filter = movieContent[i].querySelectorAll(
       ".movie-content-text h2"
     )[0];
-    const result = filter.innerHTML || filter.innerText;
+    const result = filter.innerHTML;
     if (result.toLowerCase().indexOf(Name) > -1 || result.indexOf(Name) > -1) {
       movieContent[i].style.display = "";
     } else {
@@ -67,4 +67,4 @@ window.onresize = function () {
 
 result();
 getAPI();
-window.onload = setTimeout(searchMovie, 100);
+setInterval(searchMovie, 100);
