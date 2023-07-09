@@ -28,7 +28,7 @@ function getAPI() {
                 <p>${dataList.genre}</p>
                 <b>${dataList.country}</b>
                 </div>
-                <a class="play-icon" href="./Route/HTML/detail.html?id=${dataList.id}"><i class="fa-sharp fa-solid fa-play"></i></a>
+                <a class="play-icon" href="detail.html?id=${dataList.id}"><i class="fa-sharp fa-solid fa-play"></i></a>
                 </div>`;
       });
       document.querySelector(".movies").innerHTML = list.join("");
