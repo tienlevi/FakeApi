@@ -1,5 +1,8 @@
 const param = new URLSearchParams(window.location.search);
 const id = param.get("id");
+const menuBar = document.querySelector(".menu-bar");
+const menu = document.querySelector(".menu");
+const closeIcon = document.querySelector("#close-icon");
 
 function getAPI() {
   const option = {
@@ -16,3 +19,17 @@ function getAPI() {
     });
 }
 getAPI();
+
+menuBar.addEventListener("click", () => {
+  menu.classList.add("menu-active");
+});
+
+closeIcon.addEventListener("click", () => {
+  menu.classList.remove("menu-active");
+});
+
+window.onresize = function () {
+  if (innerWidth > 1000) {
+    menu.classList.remove("menu-active");
+  }
+};
