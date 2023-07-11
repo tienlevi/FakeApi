@@ -195,12 +195,6 @@ footer img {
 }
 
 @media screen and (max-width: 1190px) {
-  .movie-column {
-    max-width: 990px;
-  }
-}
-
-@media screen and (max-width: 1190px) {
   .menu {
     display: flex;
     flex-direction: column;
@@ -250,30 +244,36 @@ footer img {
   }
 
   .movie {
-    max-width: 1000px;
+    max-width: 990px;
   }
 }
 
 @media screen and (max-width: 1000px) {
   .movie {
-    max-width: 800px;
+    max-width: 850px;
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   .movie {
-    max-width: 600px;
+    max-width: 750px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .movie {
+    max-width: 580px;
   }
 }
 
 @media screen and (max-width: 600px) {
   .movie {
-    max-width: 400px;
+    max-width: 450px;
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 490px) {
   .movie {
-    max-width: 270px;
+    max-width: 300px;
   }
 }
