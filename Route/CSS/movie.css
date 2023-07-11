@@ -195,6 +195,12 @@ footer img {
 }
 
 @media screen and (max-width: 1190px) {
+  .movie {
+    max-width: 990px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
   .menu {
     display: flex;
     flex-direction: column;
@@ -243,12 +249,6 @@ footer img {
     font-size: 16px;
   }
 
-  .movie {
-    max-width: 990px;
-  }
-}
-
-@media screen and (max-width: 1000px) {
   .movie {
     max-width: 850px;
   }
